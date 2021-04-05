@@ -39,10 +39,10 @@ answers[2] = prompt('Один из последних просмотренных
 answers[3] = prompt('На сколько оцените его?', '')
 
 const numberOfFilms = answers[1];
-let lastFilmName = answers[2];
-let lastFilmLevel = answers[3];
+const lastFilmName = answers[2];
+const lastFilmLevel = answers[3];
 
-let personalMovieDB = {
+const personalMovieDB = {
   count : numberOfFilms,
   movies: {},
   actors: {},
@@ -50,12 +50,15 @@ let personalMovieDB = {
   privat: false
 };
 
-let movies = {
-  lastFilmName: lastFilmLevel
-};
+// personalMovieDB.movies = {
+//   lastFilmName: lastFilmLevel
+// };
 
-console.log(personalMovieDB.count);
-console.log(movies);
+personalMovieDB.movies[lastFilmName] = lastFilmLevel;
+
+console.log(personalMovieDB);
+console.log(personalMovieDB.movies);
+console.log(personalMovieDB.movies[lastFilmName]); /*Лучше записывать так данные а объект т.к. меньше вероятность ошибок если пользователь введет что то не то*/
 
 
 
