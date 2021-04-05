@@ -29,12 +29,58 @@
 
 
 
-// Блок вопросов. Предполагаю что вопросы будут задаваться посредством применения promt
+// Блок вопросов. Предполагаю что вопросы будут задаваться посредством применения prompt а зафиксированы будут в массиве состоящем из вопросов.
+
+// console.log(personalMovieDB.count);
+
+const answers = [];
+answers[1] = prompt('Сколько фильмов вы уже посмотрели?', '')
+answers[2] = prompt('Один из последних просмотренных фильмов?', '')
+answers[3] = prompt('На сколько оцените его?', '')
+
+const numberOfFilms = answers[1];
+let lastFilmName = answers[2];
+let lastFilmLevel = answers[3];
+
+let personalMovieDB = {
+  count : numberOfFilms,
+  movies: {},
+  actors: {},
+  genres: [],
+  privat: false
+};
+
+let movies = {
+  lastFilmName: lastFilmLevel
+};
+
+console.log(personalMovieDB.count);
+console.log(movies);
 
 
 
 
-let numberOfFilms = ansveringGuest;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
